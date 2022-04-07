@@ -28,7 +28,7 @@ const isValidRequestBody = function (requestBody) {
 }
 
 const isValidUrl = function (value) {
-    urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-/]))?/;
+    urlRegex = /^https?:\/\/([\w\d\-]+\.)+\w{2,}(\/.+)?$/;
     return urlRegex.test(value);
 }
 
